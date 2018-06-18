@@ -58,14 +58,14 @@
                     <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
                     <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
                 </ul>
-                <div class="address d-inline-block"><i class="icofont icofont-social-google-map mr-2"></i>Vision Plaza, Mombasa Road</div>
+                <div class="address d-inline-block"><i class="icofont icofont-social-google-map mr-2"></i>Vision Plaza, Mbsa Rd</div>
             </div>
             <div class="col-lg-6 col-md-6 text-center text-md-right">
                 <div class="email d-inline-block">
                     <a href="@"><i class="fa fa-envelope-o mr-2"></i>Quick Email</a>
                 </div>
                 <div class="phone d-inline-block">
-                    <i class="fa fa-phone mr-2"></i>Tel +254-733 425585
+                    <i class="fa fa-phone mr-2"></i>Tel +254-782 222122
                 </div>
             </div>
         </div>
@@ -261,10 +261,10 @@
                 <div class="pricing-tale wow fadeInUp" data-wow-delay="0.1s">
                     <div class="prcing-head">
                         <h3>Emergency Loan</h3></div>
-                    <div class="price"><span>upto</span>KES 30000</div>
+                    <div class="price"><span>upto</span>KES 30,000</div>
                     <div class="features">
                         <ul>
-                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 10000</li>
+                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 10,000</li>
                             <li><i class="icofont icofont-tick-mark"></i>1 Month tenor</li>
                             <li><i class="icofont icofont-tick-mark"></i>no collateral</li>
                             <li><i class="icofont icofont-tick-mark"></i>short-term for emergency</li>
@@ -283,10 +283,10 @@
                 <div class="pricing-tale wow fadeInUp" data-wow-delay="0.2s">
                     <div class="prcing-head">
                         <h3>Salary Loan</h3></div>
-                    <div class="price"><span>upto</span>KES 10000</div>
+                    <div class="price"><span>upto</span>KES 100,000</div>
                     <div class="features">
                         <ul>
-                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 30000</li>
+                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 30,000</li>
                             <li><i class="icofont icofont-tick-mark"></i>2 month tenor</li>
                             <li><i class="icofont icofont-tick-mark"></i>collateral - motorvehicle, equipment and machines</li>
                             <li><i class="icofont icofont-tick-mark"></i>ideal for regular salaried individuals</li>
@@ -304,10 +304,10 @@
                 <div class="pricing-tale wow fadeInUp" data-wow-delay="0.3s">
                     <div class="prcing-head">
                         <h3>Business Loan</h3></div>
-                    <div class="price"><span>upto</span>KES 200000</div>
+                    <div class="price"><span>upto</span>KES 200,000</div>
                     <div class="features">
                         <ul>
-                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 50000</li>
+                            <li><i class="icofont icofont-tick-mark"></i>Minimum - KES 50,000</li>
                             <li><i class="icofont icofont-tick-mark"></i>2 Months repayment period</li>
                             <li><i class="icofont icofont-tick-mark"></i>collateral - motorvehicle, equipment and machines e.tc</li>
                             <li><i class="icofont icofont-tick-mark"></i>availbale for clients who have been in operation for over 12 months</li>
@@ -326,45 +326,45 @@
 
 <!-- Start: Testimonial
 ============================= -->
-<section id="testimonial" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3 text-center">
-                <div class="section-header">
-                    <h2>Testimonial</h2>
-                    <p class="wow fadeInUp" data-wow-delay="0.1s">What our Clients say about us</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="testimonial-carousel text-center">
-                    <div class="single-testimonial">
-                        <div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>
-                        <h4>Naiomi Watson</h4>
-                        <p>Handy loans with flexible repayment period</p>
-                    </div>
-                    <div class="single-testimonial">
-                        <div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>
-                        <h4>John Doe</h4>
-                        <p>Easy to get a loan without following many steps</p>
-                    </div>
-                    <div class="single-testimonial">
-                        <div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>
-                        <h4>T Kinui</h4>
-                        <p>Best and trustworthy partner for growing your SMEs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{--<section id="testimonial" class="section-padding">--}}
+    {{--<div class="container">--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-6 offset-md-3 text-center">--}}
+                {{--<div class="section-header">--}}
+                    {{--<h2>Testimonial</h2>--}}
+                    {{--<p class="wow fadeInUp" data-wow-delay="0.1s">What our Clients say about us</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        {{--<div class="row">--}}
+            {{--<div class="col-md-12">--}}
+                {{--<div class="testimonial-carousel text-center">--}}
+                    {{--<div class="single-testimonial">--}}
+                        {{--<div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>--}}
+                        {{--<h4>Naiomi Watson</h4>--}}
+                        {{--<p>Handy loans with flexible repayment period</p>--}}
+                    {{--</div>--}}
+                    {{--<div class="single-testimonial">--}}
+                        {{--<div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>--}}
+                        {{--<h4>John Doe</h4>--}}
+                        {{--<p>Easy to get a loan without following many steps</p>--}}
+                    {{--</div>--}}
+                    {{--<div class="single-testimonial">--}}
+                        {{--<div class="img-rounded"><img src="assets/img/homepage/testimonial/testimonial.png" alt=""></div>--}}
+                        {{--<h4>T Kinui</h4>--}}
+                        {{--<p>Best and trustworthy partner for growing your SMEs</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--</section>--}}
 <!-- End: Testimonial
 ============================= -->
 
 <!-- Start: Subscribe
 ============================= -->
-<section id="subscribe">
+<section id="subscribe" style="margin: 2%">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12 text-lg-left text-center mb-lg-0 mb-3">

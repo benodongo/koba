@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="demo/demo.css">
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- COLORS | CURRENTLY USED DIFFERENTLY TO SWITCH FOR DEMO. IN ORIGINAL FILE ALL COLORS AVAILABLE IN COLORS FOLDER -->
     <link rel="stylesheet" href="assets/css/colors/default.css" title="default">
@@ -58,27 +60,25 @@
 
 <!-- Start: Header Top
 ============================= -->
-<section id="header-top">
+<section id="header-top" style="margin-bottom: 10%">
     <div class="container">
 
         <div class="row">
             <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
                 <ul class="header-social d-inline-block">
-                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
-                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li class="active"><a href="/contact">Contact</a></li>
+                    </ul>
                 </ul>
                 <div class="address d-inline-block"><i class="icofont icofont-social-google-map mr-2"></i>Vision Plaza, Mombasa Road</div>
             </div>
             <div class="col-lg-6 col-md-6 text-center text-md-right">
-                <div class="email d-inline-block">
-                    <a href="@"><i class="fa fa-envelope-o mr-2"></i>Quick Email</a>
-                </div>
-                <div class="phone d-inline-block">
-                    <i class="fa fa-phone mr-2"></i>Tel +254-733 425585
-                </div>
+                <li><a href="{{ route('register') }}">REGISTER</a></li>
             </div>
         </div>
     </div>
@@ -86,117 +86,72 @@
 <!-- End: Header Top
 ============================= -->
 
-<!-- Start: Search
-============================= -->
-
-<div id="search">
-    <a href="#" id="close-btn">
-        <i class="fa fa-times"></i>
-    </a>
-    <div>
-        <input placeholder="type here" id="searchbox" type="search" />
-        <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
-    </div>
-</div>
-
-<!-- End: Search
-============================= -->
-
-<!-- Start: Header
-============================= -->
-<header id="header">
-
-    <!-- Navigation Starts -->
-    <div class="navbar-area sticky-nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-6">
-                    <div class="logo main">
-                        <a href="index.html"><img class="responsive" src="assets/img/logo3.png" alt="KobaCapital"></a>
-                    </div>
-                </div>
-
-                <!-- Nav -->
-                <div class="col-lg-6 d-none d-lg-block">
-                    <nav class="text-right main-menu">
-
-                        <ul>
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/products">Products</a></li>
-                            <li class="active"><a href="/contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Nav End -->
-            </div>
-        </div>
-
-        <!-- Start Mobile Menu -->
-        <div class="mobile-menu-area d-lg-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="mobile-menu">
-                            <nav class="mobile-menu-active">
-
-                                <ul>
-                                    <li>
-                                        <a href="/">Home</a>
-                                    </li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/products">Products</a></li>
-                                    <li class="active"><a href="/contact">Contact</a></li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Mobile Menu -->
-    </div>
-    <!-- Navigation End -->
-
-    <!-- Breadcrumb Area -->
-    <section id="breadcrumb-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Contact Us</h1>
-                    <ul class="breadcrumb-nav list-inline">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Contact Us</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-</header>
-<!-- End: Header
-============================= -->
 
 
 
 <!-- Start: Contact Us
 ============================= -->
-<section id="contact-area">
+<section id="contact-area" style="background: url(/assets/img/breadcumb-bg.jpg) no-repeat center / cover;">
     <div class="contact-box">
 
         <div class="row">
-            <div class="col-lg-8 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="get-in-touch">
-                    <h3>Get in Touch</h3>
-                    <p>Feel free to contact with us</p>
-                    <form action="send_email.php" method="post">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your name*" required>
-                        <input type="email" name="email" class="form-control" id="email" placeholder="Email here*" required>
-                        <textarea name="msg" class="form-control" rows="1" placeholder="Type your message*" required></textarea>
-                        <button type="submit" name="submit" class="boxed-btn"> Submit</button>
+                    <h3 style="margin: auto; text-align: center">SIGN IN</h3>
+                    <p style="text-align: center"> Sign in First to Apply</p>
+                    <form action="{{ route('login') }}" method="POST"  class="form-group">
+
+                        {{ csrf_field() }}
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -254,6 +209,8 @@
 
 <!-- Custom Script -->
 <script src="assets/js/custom.js"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
 
 <!-- =========================================================
      STYLE SWITCHER | ONLY FOR DEMO NOT INCLUDED IN MAIN FILES

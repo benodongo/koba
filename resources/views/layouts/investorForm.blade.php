@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: benson
+ * Date: 5/14/18
+ * Time: 10:52 AM
+ */
+  ?>
+        <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,8 +21,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="demo/demo.css">
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- COLORS | CURRENTLY USED DIFFERENTLY TO SWITCH FOR DEMO. IN ORIGINAL FILE ALL COLORS AVAILABLE IN COLORS FOLDER -->
     <link rel="stylesheet" href="assets/css/colors/default.css" title="default">
@@ -37,134 +43,82 @@
 </head>
 
 <body class="gray-bg">
-
-<!-- Start: Preloader
-============================= -->
-
-<!--
-  <div class="preloader">
-      <div class="loader"></div>
-  </div>
--->
-
-<!-- End: Preloader
-============================= -->
-
 <!-- Start: Header Top
 ============================= -->
-<section id="header-top" style="margin-bottom: 10%">
+<section id="header-top">
     <div class="container">
 
         <div class="row">
             <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
                 <ul class="header-social d-inline-block">
-                    <ul>
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/products">Products</a></li>
-                        <li class="active"><a href="/contact">Contact</a></li>
-                    </ul>
+                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
+                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
                 </ul>
                 <div class="address d-inline-block"><i class="icofont icofont-social-google-map mr-2"></i>Vision Plaza, Mombasa Road</div>
             </div>
             <div class="col-lg-6 col-md-6 text-center text-md-right">
-                <li><a href="{{ route('login') }}">LOGIN</a></li>
+                <div class="email d-inline-block">
+                    <a href="@"><i class="fa fa-envelope-o mr-2"></i>Quick Email</a>
+                </div>
+                <div class="phone d-inline-block">
+                    <i class="fa fa-phone mr-2"></i>Tel +254-733 425585
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- End: Header Top
 ============================= -->
+<!--start form section-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Personal Details</li>
+                    <li>Social Profiles</li>
+                    <li>Account Setup</li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset>
+                    <h2 class="fs-title">Personal Details</h2>
+                    <h3 class="fs-subtitle">Tell us something more about you</h3>
+                    <input type="text" name="fname" placeholder="First Name"/>
+                    <input type="text" name="lname" placeholder="Last Name"/>
+                    <input type="text" name="phone" placeholder="Phone"/>
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">Social Profiles</h2>
+                    <h3 class="fs-subtitle">Your presence on the social network</h3>
+                    <input type="text" name="twitter" placeholder="Twitter"/>
+                    <input type="text" name="facebook" placeholder="Facebook"/>
+                    <input type="text" name="gplus" placeholder="Google Plus"/>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">Create your account</h2>
+                    <h3 class="fs-subtitle">Fill in your credentials</h3>
+                    <input type="text" name="email" placeholder="Email"/>
+                    <input type="password" name="pass" placeholder="Password"/>
+                    <input type="password" name="cpass" placeholder="Confirm Password"/>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                </fieldset>
+            </form>
 
-
-
-
-<!-- Start: Contact Us
-============================= -->
-<section id="contact-area" style="background: url(/assets/img/breadcumb-bg.jpg) no-repeat center / cover;">
-    <div class="contact-box">
-
-        <div class="row">
-            <div class="col-lg-12 col-md-12">
-                <div class="get-in-touch">
-                    <h3 style="margin: auto; text-align: center">CREATE ACCOUNT</h3>
-                    <form action="{{ route('register') }}" method="POST"  class="form-group">
-
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    REGISTER
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
-
     </div>
-</section>
-<!-- End: Contact Us
-============================= -->
+</div>
 
-<!-- Start: Footer Sidebar
 
-<!-- End: Footer Sidebar
-============================= -->
+<!-- end section-->
+
 
 <!-- Start: Footer Copyright
 ============================= -->
@@ -202,14 +156,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 
-<!-- Map Script -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqoWGSQYygV-G1P5tVrj-dM2rVHR5wOGY"></script>
-<script src="assets/js/map-script.js"></script>
 
 <!-- Custom Script -->
 <script src="assets/js/custom.js"></script>
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+<!-- scripts for form!-->
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/msform.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 
 <!-- =========================================================
      STYLE SWITCHER | ONLY FOR DEMO NOT INCLUDED IN MAIN FILES
@@ -282,3 +238,4 @@
 </body>
 
 </html>
+
