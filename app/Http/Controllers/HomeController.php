@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Applicant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,7 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $applicant = Applicant::where('applicant_id','=',Auth::User()->id)->first();;
+        if ($applicant != null){
+            return redirect('/myloans');
+
+
+        }else {
+            return view('home',['applicant'=>$applicant]);
+
+        }
+
     }
     public  function store(Request $request)
     {

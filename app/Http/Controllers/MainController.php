@@ -29,6 +29,18 @@ class MainController extends Controller
     {
         return view('layouts.contact');
     }
+    public function career()
+    {
+        return view("layouts.careers");
+    }
+    public function recovery()
+    {
+        return view("layouts.career_recovery");
+    }
+    public function intern()
+    {
+        return view("layouts.career_intern");
+    }
 
     /**
      * Show the form for creating a new resource.
